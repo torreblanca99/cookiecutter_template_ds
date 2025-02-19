@@ -13,6 +13,7 @@ FILES_COPY = [
     'README.md',
     'poetry.lock'
     'pyproject.toml',
+    '.pre-commit-config.yaml',
     ]
 
 repo_name = '{{cookiecutter.repo_name}}'
