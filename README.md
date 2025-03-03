@@ -1,58 +1,61 @@
-# {{ cookiecutter.repo_name }}
+# DS Cookiecutter template 🍪 ✂️
+This repository contains a template for Data Science projects. This template is used with Cookiecutter.
 
-{{ cookiecutter.project_short_description }}
+[[Link to Cookiecutter]](https://www.cookiecutter.io/)
 
-## Autor
-{{ cookiecutter.full_name }}
 
-## Project Organization
-
+## Project Structure 📁
+ When you use this template, your projects will have the following structure:
 ```
-├── LICENSE            <- License of the project
-├── HISTORY.md         <- The HISTORY changes track
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+├── LICENSE            <- MIT License of the project
+├── README.md          <- The top-level README for Data Scientists using this project (project documentation).
 │
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── notebooks          <- Jupyter notebooks.
 │
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── poetry.toml   <- Files with the libraries and requirements using Poetry,
+├── poetry.lock   <- it creates a virtual environment and manage all libraries.
+|
+├── .pre-commit-config.yaml   <- Basic precommit hooks.
+|
+├── .gitignore  <- Basic gitignore file
 │
 └── {{ cookiecutter.module_name }}   <- Source code for use in this project.
     │
     ├── __init__.py             <- Makes {{ cookiecutter.module_name }} a Python module
     │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling
-    │   ├── __init__.py
-    │   ├── predict.py          <- Code to run model inference with trained models
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
 ```
 
-## Requirements
-Python {{ cookiecutter.version_python }}
-
-## Licencia
-{{ cookiecutter.open_source_license }}
+## Usage 🚀
+To get started with this template, you need Cookiecutter and Poetry (for viraual environments and libraries) Follow these steps:
+1. **Intall** cookiecutter:
+```bash
+pip install cookiecutter
+```
+2. **Use** template:
+```bash
+cookiecutter https://github.com/torreblanca99/course_financial_applications.git
+```
+3. **Set** names: here ypu have to specifie the names for the following parts (they have default values):
+```json
+{
+    "full_name": "Julio Torreblanca",
+    "repo_name": "DS Repo",
+    "module_name": "module_name",
+    "project_short_description": "Template.",
+    "version": "1.0.0",
+    "version_python": "3.12"
+}
+```
+4. **Install** Poetry:
+```bash
+pip install poetry
+```
+5. Create **Viraul Enviroment** and **install** libraries with Poetry:
+```bash
+poetry install
+```
