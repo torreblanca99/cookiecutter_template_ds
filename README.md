@@ -38,7 +38,7 @@ pip install cookiecutter
 ```
 2. **Use** template:
 ```bash
-cookiecutter https://github.com/torreblanca99/course_financial_applications.git
+cookiecutter https://github.com/torreblanca99/cookiecutter_template_ds.git
 ```
 3. **Set** names: here ypu have to specifie the names for the following parts (they have default values):
 ```json
